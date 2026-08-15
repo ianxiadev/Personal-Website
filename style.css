@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #d4e2f0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  max-width: 1200px;
+  background-color:#eaf2f8;
+  box-shadow: 0 0 30px rgba(0,0,0,0.06);
+  border-radius: 12px;
+  padding: 40px 50px;
+}
+
+section {
+  margin-top: 50px;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+.job, .project {
+  width: 100%;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-meta {
+  color: #888;
+  font-style: italic;
+  margin-top: 0;
+}
+
+h2 {
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+  color: #2c3e50;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: sticky;
+  top: 0;
+  background-color: #eaf2f8;
+  padding: 15px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2c3e50;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #2980b9;
+}
+
+.job:hover, .project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 600px) {
+  body {
+    margin-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:20px;
+}
+
+#projects h2 {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+  #projects {
+    grid-template-columns: 1fr;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 30%;
+  margin-bottom: 15px;
+  box-shadow: 0 4x 12px rgba(0,0,0,0.1);
+}
